@@ -1,0 +1,54 @@
+@use '../utils/variables' as *;
+
+.shop-card {
+    transition: all 0.5s;
+    border: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+
+    &:hover {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    }
+
+    img {
+        object-fit: contain;
+        height: 200px;
+    }
+}
+
+.brand-category {
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    display: inline-block;
+    background: rgba(51, 191, 242, 0.1);
+    color: $primary;
+    border-radius: 4px;
+}
+
+.brand-tag-cloud {
+    background: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 5px;
+
+    .brand {
+        cursor: pointer;
+        font-size: 0.85rem;
+        padding: 4px 10px;
+        display: inline-block;
+        background: rgba(230, 230, 230);
+        color: gray;
+        border-radius: 4px;
+
+        &.active {
+            background: rgba(51, 191, 242, 0.1);
+            color: $primary;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}

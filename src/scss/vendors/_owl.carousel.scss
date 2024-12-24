@@ -1,0 +1,60 @@
+@use '../utils/variables' as *;
+
+.banner-slider .owl-nav button {
+    border: 2px solid $primary !important;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    left: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-slider .owl-nav button i,
+.banner-slider .owl-nav button span {
+    color: #fff;
+}
+
+.banner-slider .owl-nav button:hover {
+    background-color: $primary;
+}
+
+.banner-slider .owl-nav .owl-next {
+    right: 20px;
+    left: auto;
+}
+
+.banner-slider .owl-dots {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider-area:hover .owl-carousel .owl-nav .owl-prev {
+    opacity: 1;
+}
+
+.slider-area:hover .owl-carousel .owl-nav .owl-next {
+    opacity: 1;
+}

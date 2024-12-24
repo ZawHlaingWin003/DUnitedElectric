@@ -1,0 +1,98 @@
+@use '../utils' as *;
+
+
+#feature {
+    background-color: rgba(246, 249, 252, 1);
+    padding: 90px 0px 70px;
+}
+
+#feature .s-top-p {
+    margin-bottom: 47px;
+}
+
+.feature-box {
+    position: relative;
+    padding: 0px 20px;
+    background: #fff;
+    border: 3px solid #bbbbbb;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.feature-box:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 42px;
+    height: 45px;
+    border-right: 3px solid $primary;
+    border-bottom: 3px solid $primary;
+    right: -3px;
+    bottom: -3px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+
+.feature-box:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 42px;
+    height: 45px;
+    border-top: 3px solid $primary;
+    border-left: 3px solid $primary;
+    left: -3px;
+    top: -3px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+
+.feature-box:hover:after {
+    width: 310px;
+    height: 205px;
+}
+
+.feature-box:hover:before {
+    width: 310px;
+    height: 205px;
+}
+
+.feature-box:hover {
+    -webkit-box-shadow: 0 20px 40px #bbbbbbc2;
+    box-shadow: 0 20px 40px #bbbbbbc2;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.feature-icon {
+    margin-top: 15px;
+}
+
+.feature-icon i {
+    display: block;
+    margin-top: 33px;
+    font-size: 50px;
+    color: $primary;
+    margin-bottom: 20px;
+}
+
+.feature-details h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.feature-details p {
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+
+/* our great features end */

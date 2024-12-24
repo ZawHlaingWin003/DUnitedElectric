@@ -1,0 +1,82 @@
+@use '../utils/variables' as *;
+
+header {
+    nav {
+        transition: all 0.3s ease-in-out;
+
+        &.navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-collapse {
+            height: 80px;
+
+            .navbar-nav {
+                height: 100%;
+
+                .nav-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            letter-spacing: 0.5px;
+
+            &::before {
+                content: "";
+                background: $primary;
+                position: absolute;
+                bottom: 20px;
+                width: 0;
+                height: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover::before,
+            &.active::before {
+                width: 65%;
+                opacity: 1;
+            }
+        }
+
+        &.navbar-fixed {
+            .nav-link::before {
+                height: 4px;
+                bottom: 0;
+            }
+
+            .navbar-nav li a:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        padding: 0 !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .navbar-toggler:not(:disabled) {
+        outline: none;
+        border: none;
+    }
+}

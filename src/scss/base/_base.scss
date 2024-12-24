@@ -1,0 +1,19 @@
+@use '../utils/variables' as *;
+
+body {
+    overflow-x: hidden;
+    background-color: #e8e8ed;
+    opacity: 0.8;
+    background-image: radial-gradient($primary 0.5px, #e8e8ed 0.5px);
+    background-size: 10px 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}

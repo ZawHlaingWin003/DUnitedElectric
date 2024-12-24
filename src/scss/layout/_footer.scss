@@ -1,0 +1,14 @@
+/* ============================= 
+Footer Style
+================================ */
+
+.gradient-divider {
+    height: 1px;
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    background: linear-gradient(to right,
+            white 10%,
+            red 50%,
+            white 90%);
+}

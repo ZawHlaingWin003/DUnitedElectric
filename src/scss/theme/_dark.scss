@@ -1,0 +1,26 @@
+@use '../vendors/bootstrap' as *;
+
+@include color-mode(dark) {
+
+    // _theme-dark.scss
+    :root {
+        --bs-body-bg: #121212;
+        --bs-body-color: #f8f9fa;
+    }
+
+    // .section-title {
+    //     color: $color-text-light;
+    // }
+
+    // .text-link {
+    //     color: $color-text-light;
+    // }
+
+    // p {
+    //     color: $color-text-light;
+    // }
+
+    // .business-card {
+    //     border: 1px solid #323232;
+    // }
+}

@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+.sub-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section-heading {
+    font-weight: 600;
+    margin: 0;
+    text-transform: capitalize;
+
+    span {
+        color: $primary;
+    }
+}
+
+// Section Heading Separator
+.section-underline {
+    position: relative;
+    margin: 0 0 42px;
+    display: inline-block;
+
+    div {
+        position: absolute;
+        text-align: center;
+        bottom: -2rem;
+        width: auto;
+        display: inline;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+
+        i {
+            color: $primary;
+            z-index: 9;
+            font-size: 40px;
+            padding: 0 2px;
+            position: relative;
+        }
+
+        .one,
+        .two {
+            width: 90px;
+            height: 1.5px;
+            position: absolute;
+            top: 50%;
+            background: $primary;
+            z-index: 9;
+        }
+
+        .one {
+            left: 130%;
+        }
+
+        .two {
+            right: 130%;
+        }
+    }
+}

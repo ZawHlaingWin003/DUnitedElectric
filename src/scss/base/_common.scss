@@ -1,0 +1,111 @@
+@use '../utils' as *;
+
+.section {
+    padding: 5rem 0;
+}
+
+.page-banner {
+    height: 400px;
+    position: relative;
+    background-image: url('src/images/section-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ec1d25, $primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.logo-text {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #ec1d25 0%, $primary 100%) 1;
+    padding: 10px 20px;
+    display: inline-flex;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 24px 0px 24px 0px;
+}
+
+
+.full-column {
+    white-space: nowrap;
+}
+
+.errors {
+    color: red;
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+
+.bg-img {
+    background-position: center center;
+    background-size: cover;
+}
+
+.img-hover-scale {
+    img {
+        @include transform-duration-5s;
+    }
+
+    &:hover img {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+
+        @include transform-duration-5s;
+    }
+}
+
+.hover-up {
+    transition: all .25s cubic-bezier(.02, .01, .47, 1);
+
+    &:hover {
+        transform: translateY(-3px);
+        transition: all .25s cubic-bezier(.02, .01, .47, 1);
+    }
+}
+
+.progress-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.progress-circular {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-top: 2px solid $primary;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

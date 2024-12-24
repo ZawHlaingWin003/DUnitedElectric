@@ -1,0 +1,44 @@
+@use '../utils' as *;
+
+.about-content {
+    h3 span {
+        color: $primary;
+    }
+}
+
+.image-container {
+    position: relative;
+    width: fit-content;
+
+    .image-wrapper {
+        position: relative;
+        display: flex;
+
+        .image {
+            position: absolute;
+            width: 450px;
+            height: 350px;
+            object-fit: cover; // Ensures the image fits within the dimensions
+            transition: all 0.5s ease-in-out; // Smooth transition for hover effects
+            z-index: 1;
+            border-radius: 8px; // Rounded corners for better aesthetics
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+
+            &:nth-child(1) {
+                top: -20px;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                bottom: -20px; // Slight offset to overlap corners
+                right: 0; // Slight offset to overlap corners
+            }
+
+            &:hover {
+                z-index: 10; // Bring hovered image to the top
+                transform: scale(1.05) translate(-10px, -10px); // Zoom and subtle reposition
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); // Enhanced shadow on hover
+            }
+        }
+    }
+}

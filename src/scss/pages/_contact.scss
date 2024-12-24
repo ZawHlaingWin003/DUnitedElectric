@@ -1,0 +1,138 @@
+@use '../utils/variables' as *;
+
+// Contact Us Styles
+.consultation-form {
+
+    .contact-form {
+        background: rgb(248, 248, 248);
+        border-radius: 0 1rem 0 0;
+
+        input,
+        textarea {
+            background: rgb(248, 248, 248);
+        }
+    }
+
+    .form-wrapper {
+        background: rgb(248, 248, 248);
+        border-radius: 0 5px 5px 0;
+        height: 500px;
+        padding: 60px 40px 0 40px;
+
+        .my_btn {
+            border: 0;
+        }
+
+        h4 {
+            margin-bottom: 33px;
+        }
+    }
+
+    .theme-form-one {
+
+        input,
+        .form-control {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #dfdfdf;
+            border-radius: 0;
+            outline: none;
+            box-shadow: none;
+            font-size: 16px;
+            padding: 0 0 12px;
+            margin-bottom: 35px;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            height: 110px;
+            max-height: 110px;
+            resize: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #dfdfdf;
+            font-size: 16px;
+            padding: 0 0 10px;
+            margin-bottom: 32px;
+        }
+    }
+
+
+    .contact-address {
+        background: $primary;
+        padding: 60px 55px 98px 55px;
+        border-radius: 1rem 0 0 0;
+
+        h4 {
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: #fff;
+            margin-bottom: 29px;
+        }
+
+        p {
+            color: #fff;
+            margin-bottom: 26px;
+        }
+
+        .con-num {
+            a {
+                margin-bottom: 10px;
+                color: #fff;
+
+                i {
+                    color: #fff;
+                    font-size: 18px;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                    border: 1px solid #fff;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background: #fff;
+                        border-color: #fff;
+                        color: #333;
+                    }
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .f-social-links {
+            margin-top: 29px;
+        }
+
+        a {
+            span {
+                font-size: 16px;
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                position: relative;
+                z-index: 2;
+                overflow: hidden;
+                border-radius: 3px;
+                margin-right: 5px;
+                border: 1px solid #fff;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: #fff;
+                    border-color: #fff;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
